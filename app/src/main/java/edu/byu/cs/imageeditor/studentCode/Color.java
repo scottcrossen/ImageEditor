@@ -15,6 +15,8 @@ public class Color {
         return Integer.toString(value);
     }
     public void set_value(int new_int){
-        value=new_int;
+        if (new_int>=255) value=255;
+        else if (new_int<=0) value=0;
+        else value=new_int;
     }
 }

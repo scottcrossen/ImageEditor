@@ -25,6 +25,26 @@ public class Pixel {
         blue.set_value(average);
     }
     public String toString(){
-        return red.toString().concat("\n").concat(blue.toString()).concat("\n").concat(green.toString()).concat("\n");
+        return red.toString().concat("\n").concat(green.toString()).concat("\n").concat(blue.toString()).concat("\n");
     }
+    void set_to_middle(){
+        red.set_value(128);
+        green.set_value(128);
+        blue.set_value(128);
+    }
+    void maximize(Pixel second){
+        int red_diff=red.value-second.red.value;
+        int green_diff=green.value-second.green.value;
+        int blue_diff=blue.value-second.blue.value;
+        int new_value;
+        if(Math.abs(red_diff)>= Math.abs(green_diff) && Math.abs(red_diff)>= Math.abs(blue_diff)) new_value=128-red_diff;
+        else if(Math.abs(green_diff)> Math.abs(red_diff) && Math.abs(green_diff)>= Math.abs(blue_diff)) new_value=128-green_diff;
+        else new_value=128-blue_diff;
+        red.set_value(new_value);
+        green.set_value(new_value);
+        blue.set_value(new_value);
+    }
+    public int return_red_value(){return red.value;}
+    public int return_green_value(){return green.value;}
+    public int return_blue_value(){return blue.value;}
 }
