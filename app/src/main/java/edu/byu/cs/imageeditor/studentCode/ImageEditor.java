@@ -7,9 +7,7 @@ import java.io.BufferedReader;
  */
 public class ImageEditor implements IImageEditor {
     public Image current_image;
-    public ImageEditor(){
-
-    }
+    public ImageEditor(){}
     public void load(BufferedReader bufferedReader){
         current_image=new Image(bufferedReader);
     }

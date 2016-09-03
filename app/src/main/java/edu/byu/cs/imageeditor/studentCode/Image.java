@@ -30,12 +30,6 @@ public class Image {
             iterator++;
         }
     }
-    public Pixel[] getPixel2dArray() {
-        return pixel_array;
-    }
-    public void setPixel2dArray(Pixel[] new_array) {
-        this.pixel_array = new_array;
-    }
     public String invert(){
         StringBuilder output= new StringBuilder();
         output.append(print_image_header());
