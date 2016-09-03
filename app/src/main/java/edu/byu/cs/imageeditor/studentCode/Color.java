@@ -8,4 +8,7 @@ public class Color {
     public Color(int new_int){
         value=new_int;
     }
+    public void invert(){
+        value=255-value;
+    }
 }

@@ -6,11 +6,16 @@ package edu.byu.cs.imageeditor.studentCode;
  */
 public class Pixel {
     private Color red;
-    private Color blue;
     private Color green;
-    public Pixel(int new_red, int new_blue, int new_green){
+    private Color blue;
+    public Pixel(int new_red, int new_green, int new_blue){
         red=new Color(new_red);
-        blue=new Color(new_blue);
         green=new Color(new_green);
+        blue=new Color(new_blue);
+    }
+    public void invert(){
+        red.invert();
+        blue.invert();
+        green.invert();
     }
 }
