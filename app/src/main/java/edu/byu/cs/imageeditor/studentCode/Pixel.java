@@ -15,7 +15,16 @@ public class Pixel {
     }
     public void invert(){
         red.invert();
-        blue.invert();
         green.invert();
+        blue.invert();
+    }
+    public void grayscale(){
+        int average=(red.value+green.value+blue.value)/3;
+        red.set_value(average);
+        green.set_value(average);
+        blue.set_value(average);
+    }
+    public String toString(){
+        return red.toString().concat("\n").concat(blue.toString()).concat("\n").concat(green.toString()).concat("\n");
     }
 }

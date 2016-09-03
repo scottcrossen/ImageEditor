@@ -26,7 +26,7 @@ public class Image {
             int new_red=scanner.nextInt();
             int new_green=scanner.nextInt();
             int new_blue=scanner.nextInt();
-            pixel_array[0][iterator]=new Pixel(new_red, new_green, new_blue);
+            //pixel_array[0][iterator]=new Pixel(new_red, new_green, new_blue);
             iterator++;
         }
     }
@@ -37,15 +37,35 @@ public class Image {
         this.pixel_array = pixel2dArray;
     }
     public String invert(){
-        return "";
+        StringBuilder output= new StringBuilder();
+        output.append(print_image_header());
+        for(int iterator=0; iterator<height*width; iterator++) {
+            pixel_array[0][iterator].invert();
+            output.append(pixel_array[0][iterator].toString());
+        }
+        return output.toString();
     }
     public String grayscale(){
-        return "";
+        StringBuilder output= new StringBuilder();
+        output.append(print_image_header());
+        for(int iterator=0; iterator<height*width; iterator++) {
+            pixel_array[0][iterator].grayscale();
+            output.append(pixel_array[0][iterator].toString());
+        }
+        return output.toString();
     }
     public String emboss(){
         return "";
     }
     public String motionblur(int blurLength){
         return "";
+    }
+    private String print_image_header() {
+        StringBuilder output=new StringBuilder();
+        output.append(color_code + "\n");
+        output.append(width + " ");
+        output.append(height + "\n");
+        output.append(max_color + "\n");
+        return output.toString();
     }
 }
