@@ -28,6 +28,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import edu.byu.cs.imageeditor.studentCode.IImageEditor;
+import edu.byu.cs.imageeditor.studentCode.ImageEditor;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,8 +75,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // TODO: initialize the IImageEditor object with your implementation
-        //mImageEditor = new ImageEditor();
+        mImageEditor = new ImageEditor();
 
         // initialize default values
         mBlurLength = DEFAULT_BLUR_LENGTH;
