@@ -72,7 +72,7 @@ public class Image {
             int green_sum=pixel_array[iterator].return_green_value();
             int blue_sum=pixel_array[iterator].return_blue_value();
             int pixel_count=1;
-            for (int blur_iterator = iterator + 1; ((blur_iterator + 1) % width != 0) && (blur_iterator - iterator < blurLength); blur_iterator++) {
+            for (int blur_iterator = iterator + 1; ((blur_iterator) % width != 0) && (blur_iterator - iterator < blurLength); blur_iterator++) {
                 red_sum += pixel_array[blur_iterator].return_red_value();
                 green_sum += pixel_array[blur_iterator].return_green_value();
                 blue_sum += pixel_array[blur_iterator].return_blue_value();
