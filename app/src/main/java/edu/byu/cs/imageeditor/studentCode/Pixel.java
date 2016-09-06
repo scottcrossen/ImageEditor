@@ -37,9 +37,9 @@ public class Pixel {
         int green_diff=green.value-second.green.value;
         int blue_diff=blue.value-second.blue.value;
         int new_value;
-        if(Math.abs(red_diff)>= Math.abs(green_diff) && Math.abs(red_diff)>= Math.abs(blue_diff)) new_value=128-red_diff;
-        else if(Math.abs(green_diff)> Math.abs(red_diff) && Math.abs(green_diff)>= Math.abs(blue_diff)) new_value=128-green_diff;
-        else new_value=128-blue_diff;
+        if(Math.abs(red_diff)>= Math.abs(green_diff) && Math.abs(red_diff)>= Math.abs(blue_diff)) new_value=128+red_diff;
+        else if(Math.abs(green_diff)> Math.abs(red_diff) && Math.abs(green_diff)>= Math.abs(blue_diff)) new_value=128+green_diff;
+        else new_value=128+blue_diff;
         red.set_value(new_value);
         green.set_value(new_value);
         blue.set_value(new_value);
